@@ -1,0 +1,62 @@
+<div class="Container4">
+  <form [formGroup]="dataForm" (ngSubmit)="onSubmit1()">
+    <h3>Form Builder 🛠️</h3>
+
+    <div class="form-row">
+      <div>
+        <label for="exampleFirstName">First Name</label>
+        <p>
+          <input type="text" formControlName="firstName" />
+        </p>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col" formGroupName="description">
+        <p><label for="">Description: </label></p>
+        <label for="examplefatherAge">fatherAge</label>
+        <p>
+          <input type="number" formControlName="fatherAge" />
+        </p>
+
+        <label for="exampleseasons">seasons</label>
+        <p>
+          <input type="text" formControlName="seasons" />
+        </p>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col">
+        <label for="exampleqty">qty</label>
+        <p>
+          <input type="number" formControlName="qty" />
+        </p>
+
+        <label for="exampleprice">price</label>
+        <p>
+          <input type="number" formControlName="price" />
+        </p>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div formArrayName="suppliers">
+        <label for="">Suppliers : </label>
+        <p><br /></p>
+        <button id="addnewsupplierbutton" (click)="addNewSupplier()">
+          Add New Supplier
+        </button>
+
+        <p><br /></p>
+        <div *ngFor="let supplier of suppliers.controls; let i = index">
+          <label for="">New Supplier : </label>
+
+          <input type="text" [formControlName]="i" />
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

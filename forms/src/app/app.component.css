@@ -1,0 +1,193 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #102753;
+  color: #333;
+}
+
+/* Container Styling */
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #102753;
+}
+
+/* Form Styles */
+form {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 50vw;
+}
+
+/* Label Styles */
+.form-group label {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 0.1rem;
+}
+
+/* Input Styles */
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #333333;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #0f2c4a;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Inline Side-by-Side Input Fields */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-row .col {
+  flex: 0 0 48%;
+}
+
+/* Checkbox Styles */
+.form-check {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-check-input {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem;
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #102753;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 100%;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Small Text Styles */
+.form-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Header Styles */
+.header {
+  background-color: #0f2c4a;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.site-name {
+  font-size: 1.5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.navbar .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar .nav-item {
+  margin-left: 1.5rem;
+}
+
+.navbar .nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar .nav-item a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #0f2c4a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* New Styling for Two Columns Structure */
+.totalContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between columns if needed */
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.columnContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.columnContainer > * {
+  margin-bottom: 10px; /* Adds space between the components in each column */
+}
+
+@media screen and (min-width: 768px) {
+  .columnContainer {
+    width: 48%; /* Two columns layout */
+  }
+}

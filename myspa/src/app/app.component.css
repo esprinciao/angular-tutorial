@@ -1,0 +1,286 @@
+/* Global Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #262222;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading1 {
+  background-color: #262222;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+aside {
+  width: 225px;
+  background-color: #fff;
+  color: #262222;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+aside h2 {
+  font-size: 1.3rem;
+  padding: 5px;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin-bottom: 10px;
+}
+
+/* Main Section */
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+main h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 15px;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.submit {
+  padding: 10px 15px;
+  margin: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover,
+.submit:hover {
+  background-color: #555;
+}
+
+/* Additional Content */
+.additional-content {
+  margin-top: 30px;
+}
+
+.content-block {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-block:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific Content Block Styles */
+.content-block-1 {
+  background-color: #e0f7fa;
+  border-radius: 5px;
+}
+.content-block-2 {
+  background-color: #f1f8e9;
+  border-radius: 5px;
+}
+.content-block-3 {
+  background-color: #ffe0b2;
+  border-radius: 5px;
+}
+.content-block-4 {
+  background-color: #fce4ec;
+  border-radius: 5px;
+}
+.content-block-5 {
+  background-color: #e8eaf6;
+  border-radius: 5px;
+}
+.content-block-6 {
+  background-color: #ffebee;
+  border-radius: 5px;
+}
+.content-block-7 {
+  background-color: #fff3e0;
+  border-radius: 5px;
+}
+.content-block-8 {
+  background-color: #f3e5f5;
+  border-radius: 5px;
+}
+.content-block-9 {
+  background-color: #e0f2f1;
+  border-radius: 5px;
+}
+.content-block-10 {
+  background-color: #e3f2fd;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  button,
+  .submit {
+    width: 100%;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  aside {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  aside ul li {
+    margin-bottom: 5px;
+  }
+
+  form input {
+    padding: 6px;
+  }
+
+  button,
+  .submit {
+    padding: 8px 12px;
+  }
+
+  main h2 {
+    font-size: 1.2rem;
+  }
+
+  .content-block {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,20 @@
+<div class="Container">
+  <form>
+    <h3>Delete Users 🗑️</h3>
+
+    <label>Enter the id:</label>
+
+    <p></p>
+    <input
+      type="text"
+      name="identity"
+      placeholder="Enter ID to delete"
+      [(ngModel)]="userId"
+    />
+
+    <p></p>
+    <button (click)="deleteUserById()" class="btn btn-primary" >
+      Delete User.
+    </button>
+  </form>
+</div>

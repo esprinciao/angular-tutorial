@@ -1,0 +1,51 @@
+<div class="quote-container">
+  <header>
+    <h1 class="quote">{{ quote }}</h1>
+    <p class="author">- {{ author }}</p>
+  </header>
+  <button (click)="getLocation()">Get Location</button>
+
+  <!-- Zen Mode Section -->
+  <div class="zen-mode-container" *ngIf="!isZenModeActive">
+    <h2 class="zen-mode-heading">Zen Mode</h2>
+    <select [(ngModel)]="selectedDuration" class="zen-mode-dropdown">
+      <option *ngFor="let option of durationOptions" [value]="option.value">
+        {{ option.label }}
+      </option>
+    </select>
+    <div class="zen-mode-buttons">
+      <button (click)="startZenMode(selectedDuration)" class="zen-mode-button">
+        Start Zen Mode
+      </button>
+    </div>
+  </div>
+
+  <div class="zen-mode-container" *ngIf="isZenModeActive">
+    <h2 class="zen-mode-heading">Zen Mode is Active</h2>
+    <div class="zen-mode-buttons">
+      <button (click)="stopZenMode()" class="zen-mode-button">
+        Stop Zen Mode
+      </button>
+    </div>
+  </div>
+
+  <!-- Display Zen Mode completion message -->
+  <div class="zen-mode-message" *ngIf="zenModeMessage">
+    <p>{{ zenModeMessage }}</p>
+  </div>
+
+  <!-- Crisis Support Section -->
+  <div class="crisis-support-container">
+    <button (click)="toggleCrisisSupport()" class="crisis-support-button">
+      {{ showCrisisSupport ? 'Hide Crisis Support' : 'Show Crisis Support' }}
+    </button>
+    <div *ngIf="showCrisisSupport" class="crisis-support-info">
+      <h2>Crisis Support</h2>
+      <p>If you are in need of immediate assistance, please reach out to the Crisis Text Line:</p>
+      <a href="https://findahelpline.com/countries/in" target="_blank" class="crisis-support-link">
+        Visit Crisis Text Line
+      </a>
+      <p>Text HOME to 741741 to connect with a crisis counselor.</p>
+    </div>
+  </div>
+</div>

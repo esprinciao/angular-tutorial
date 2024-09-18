@@ -1,0 +1,23 @@
+<div class="Container3">
+  <form [formGroup]="dataForm" (ngSubmit)="onSubmit1()">
+    <h3>Reactive 🚀</h3>
+
+    <div class="form-row">
+      <div>
+        <label for="exampleFirstName">First Name</label>
+        <p>
+          <input type="text" formControlName="firstName" />
+        </p>
+      </div>
+
+      <div>
+        <label for="exampleage">Age</label>
+        <p>
+          <input type="number" formControlName="age" />
+        </p>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

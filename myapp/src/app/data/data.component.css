@@ -1,0 +1,60 @@
+button {
+  padding: 10px 20px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 4px; /* Rounded corners */
+  background-color: #912020; /* Primary blue color */
+  color: #fff; /* White text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dataContainer {
+  display: grid;
+  grid-template-rows: 1fr 200px 300px;
+  
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Light shadow */
+  background-color: #f1efef;
+  color: black;
+}
+
+.data1 {
+  width: 100%;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Light shadow */
+  background-color: #f1efef;
+  color: black;
+}
+.data2 {
+  height: fit-content;
+  width: 100%;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Light shadow */
+  background-color: #f1efef;
+  color: black;
+}
+.data3 {
+  height: fit-content;
+  width: 100%;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Light shadow */
+  background-color: #f1efef;
+  color: black;
+}

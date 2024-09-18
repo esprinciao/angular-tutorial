@@ -1,0 +1,18 @@
+<div class="Container1">
+  <form>
+    <h4>Life Cycle :</h4>
+    <p>Demostrating life cycle methods in console.</p>
+
+    <input type="text" (keydown)="keyCapture($event.key)" />
+
+    <br />
+    <h6>{{ title }}</h6>
+
+    <button type="submit" (click)="sendMsg()">Click</button>
+
+    
+    <p>..</p>
+    <h4>From parent: {{ title }}</h4>
+    <ng-content></ng-content>
+  </form>
+</div>

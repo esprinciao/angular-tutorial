@@ -1,0 +1,74 @@
+<div class="dataContainer">
+  <div class="data1">
+    <h2><u>Data component</u></h2>
+
+    <h2>Filter Products by Brand</h2>
+    <div *ngFor="let product of productData">
+      {{ product.productId }}
+      {{ product.brand }}
+      {{ product.description }}
+      {{ product.qty }}
+      {{ product.price }}
+    </div>
+  </div>
+
+  <div class="data2">
+    <form (ngSubmit)="onSubmitBrand()">
+      <p><label for="brand">Enter your brand</label></p>
+      <select id="brand" name="brand" [(ngModel)]="selectedBrand">
+        <option value="Samsung">Samsung</option>
+        <option value="Dell">Dell</option>
+        <option value="Panasonic">Panasonic</option>
+        <option value="LG">lG</option>
+        <option value="Apple">Apple</option>
+        <option value="Wipro">Wipro</option>
+        <option value="All">All</option>
+      </select>
+
+      <p><button type="submit" id="brand">Submit</button></p>
+    </form>
+
+    <div *ngFor="let product of filteredProducts">
+      {{ product.productId }}
+      {{ product.brand }}
+      {{ product.description }}
+      {{ product.qty }}
+      {{ product.price }}
+    </div>
+  </div>
+
+  <div class="data3">
+    <h2>Filter Products by Price Range</h2>
+
+    <p>Total Products: {{ this.productData.length }}</p>
+    <p>Filtered Products: {{ filteredProductsCount }}</p>
+
+    <div *ngFor="let product of filteredProducts2">
+      {{ product.productId }}
+      {{ product.brand }}
+      {{ product.description }}
+      {{ product.qty }}
+      {{ product.price }}
+    </div>
+
+    <form (ngSubmit)="onSubmitPrice()">
+      <label for="minPrice">Min Price:</label>
+      <input
+        type="number"
+        id="minPrice"
+        name="minPrice"
+        [(ngModel)]="minPrice"
+      />
+
+      <label for="maxPrice">Max Price:</label>
+      <input
+        type="number"
+        id="maxPrice"
+        name="maxPrice"
+        [(ngModel)]="maxPrice"
+      />
+
+      <p><button type="submit" id="price">Submit</button></p>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,252 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.titlename {
+  padding: 20px;
+  font-size: 70px;
+  font-weight: 200;
+  font-style: normal;
+  letter-spacing: 5px;
+}
+.nav1 {
+  padding: 10px;
+}
+
+.container2 {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.container1 {
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #d41515);
+
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f7f7f7;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #00c6ff;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0;
+}
+
+.social-icons {
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00c6ff; /* Change color on hover */
+  transform: scale(1.1);
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  flex: 1;
+  min-width: 250px;
+  position: relative; /* Added for positioning the icon */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-icon {
+  color: #e60f00; /* Adjust color as needed */
+  padding: 6px;
+  font-size: 2rem;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  transition: color 0.3s ease;
+}
+
+.card:hover .card-icon {
+  color: #00ff26; /* Change color on hover */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem; /* Adjusted for space between icon and title */
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-button {
+  background-color: #732575;
+  color: #f7f7f7;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card-button:hover {
+  background-color: #d9e1e8;
+  color: #000000;
+}
+
+.project-cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+section {
+  padding: 4rem 2rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+section:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  background-color: #732575;
+  border: none;
+  padding: 10px 10px;
+  color: #ffffff;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  background-color: #d9e1e8;
+  color: #000000;
+}
+
+.project-cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 250px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-button {
+  background-color: #732575;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card-button:hover {
+  background-color: #d9e1e8;
+  color: #000000;
+}
+
+input {
+  width: 33%;
+  height: 40px;
+  
+  border: none;
+  border-radius: 7px;
+  background-color: #ffffff;
+}
+textarea {
+  width: 33%;
+  height: 100px;
+  font-size: 15px;
+  border: none;
+  border-radius: 7px;
+  background-color: #ffffff;
+}
+
+input::placeholder{
+  color: #6b1a6b;
+}
+
+textarea::placeholder{
+  color: #6b1a6b;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}

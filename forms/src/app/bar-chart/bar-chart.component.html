@@ -1,0 +1,23 @@
+<mat-form-field>
+  <input
+    matInput
+    [matDatepicker]="picker"
+    (dateChange)="onDateChange($event)"
+    placeholder="Select a date"
+  />
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<ejs-chart #chart [title]="chartTitle" [legendSettings]="legendSettings">
+  <e-series-collection>
+    <e-series
+      [dataSource]="chartSeries[0].dataSource"
+      [xName]="chartSeries[0].xName"
+      [yName]="chartSeries[0].yName"
+      [name]="chartSeries[0].name"
+      [type]="chartSeries[0].type"
+    >
+    </e-series>
+  </e-series-collection>
+</ejs-chart>

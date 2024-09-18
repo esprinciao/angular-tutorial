@@ -1,0 +1,78 @@
+<div class="totalContainer">
+  <div class="container" style="padding: 8px">
+    <div class="c1">
+      <h2><u> Product data </u></h2>
+      <p>product Id : {{ productId }}</p>
+      <p>description: {{ description }}</p>
+
+      <p>qty : {{ qty }}</p>
+      <p>inStock: {{ available }}</p>
+
+      <p>Enter order quantity:</p>
+
+      <p>
+        <input
+          type="text"
+          name="orderqty"
+          id=""
+          [(ngModel)]="orderqty"
+          #inputqty
+        />
+        {{ orderqty }}
+      </p>
+
+      <input type="radio" name="toggle" (click)="setGColor()" />available
+      <input type="radio" name="toggle" (click)="setRColor()" />Not available
+
+      <p>
+        Delivery:
+        <span [style.background-color]="deliverColor"
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</span
+        >
+      </p>
+    </div>
+
+    <div class="c1">
+      <br /><br /><br />
+      <p [innerHTML]="serviceTimings"></p>
+
+      <button name="placeOrder" (click)="printOrder(inputqty.value)">
+        PlaceOrder
+      </button>
+
+      <div><br /></div>
+
+      <div *ngIf="qty > orderqty; else myTemplate">
+        Ordered quantity <mark>Available</mark>
+      </div>
+
+      <ng-template #myTemplate>
+        Ordered quantity <mark>not available</mark></ng-template
+      >
+
+      <p>{{ orderDate | date : "dd MMMM yyyy" }}</p>
+
+      <div [ngSwitch]="inputqty.value">
+        <span *ngSwitchCase="200"> Quantity exact</span>
+        <span *ngSwitchCase="201"> not available</span>
+        <span *ngSwitchCase="199"> Quantity available</span>
+        <span *ngSwitchDefault> Switch case: check your input</span>
+      </div>
+
+      <div><br /></div>
+
+      <div *ngFor="let product of products">
+        {{ product.productId }}
+        {{ product.description }}
+        {{ product.price }}
+      </div>
+    </div>
+  </div>
+
+  <app-data> </app-data>
+
+  <app-color> </app-color>
+
+  <app-theme> </app-theme>
+</div>

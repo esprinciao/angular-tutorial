@@ -1,0 +1,11 @@
+<p>From child element:</p>
+
+<app-child (childEvent)="hello($event)"> </app-child>
+
+<p>On Parent :</p>
+
+<div *ngFor="let item of answer1">
+  <p>{{ item }}</p>
+</div>
+
+

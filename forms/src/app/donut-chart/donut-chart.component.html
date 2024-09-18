@@ -1,0 +1,26 @@
+<div id="action-description">
+    <p>
+      This Angular donut chart visualizes work hours vs family hours for the selected date.
+    </p>
+  </div>
+  
+  <div>
+    <label for="datePicker">Select Date:</label>
+    <input type="date" id="datePicker" (change)="onDateChange($event)" />
+  </div>
+  
+  <div class="control-section">
+    <ejs-accumulationchart id="container" #chart style='display:block; width: 92%' [centerLabel]="centerLabel" (pointRender)='pointRender($event)' [legendSettings]="legendSettings" (load)='load($event)' [enableBorderOnMouseMove]='false'>
+      <e-accumulation-series-collection>
+        <e-accumulation-series name='Hours' [dataSource]='data' xName='x' yName='y' [border]="border" [startAngle]="startAngle" innerRadius="65%" [radius]="radius" [dataLabel]="dataLabel">
+        </e-accumulation-series>
+      </e-accumulation-series-collection>
+    </ejs-accumulationchart>
+  </div>
+  
+  <style>
+    .control-section {
+      min-height: 450px;
+    }
+  </style>
+  

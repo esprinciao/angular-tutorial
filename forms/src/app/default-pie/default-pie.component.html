@@ -1,0 +1,29 @@
+<div>
+  <div><br /><br /><br /></div>
+  <label for="date">Select Date:</label>
+  <input
+    type="date"
+    id="date"
+    (change)="onDateChange($event)"
+    [value]="selectedDate"
+  />
+</div>
+
+<ejs-accumulationchart
+  [title]="title"
+  [dataSource]="data"
+  [legendSettings]="legendSettings"
+  [enableAnimation]="enableAnimation"
+  [tooltip]="tooltip"
+  (loaded)="load($event)"
+>
+  <e-accumulation-series-collection>
+    <e-accumulation-series
+      [dataSource]="data"
+      xName="name"
+      yName="value"
+      type="Pie"
+    >
+    </e-accumulation-series>
+  </e-accumulation-series-collection>
+</ejs-accumulationchart>

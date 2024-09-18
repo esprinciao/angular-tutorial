@@ -1,0 +1,25 @@
+<div class="Container">
+  <form>
+    <h3>View Users 🔍</h3>
+    
+    <p></p>
+
+    <button (click)="onSubmit()" class="btn btn-primary">Display All</button>
+
+    <p></p>
+    <label>Enter the id:</label>
+
+    <input
+      type="text"
+      name="identity"
+      id="userId"
+      placeholder="Enter ID"
+      [(ngModel)]="userId"
+    />
+
+    <p></p>
+    <button (click)="viewUserById()" class="btn btn-primary">
+      Display User By ID
+    </button>
+  </form>
+</div>

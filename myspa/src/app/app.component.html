@@ -1,0 +1,92 @@
+<div class="container">
+  <header>
+    <h1>{{ title }}</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <aside>
+      <h2>Features</h2>
+      <br />
+      <ul>
+        <li>
+          <button (click)="navigateToFeature('dashboard')">Dashboard</button>
+        </li>
+        <li>
+          <button (click)="navigateToFeature('user-management')">
+            User Management
+          </button>
+        </li>
+        <li>
+          <button (click)="navigateToFeature('reports')">Reports</button>
+        </li>
+        <li>
+          <button (click)="navigateToFeature('settings')">Settings</button>
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <br />
+      <router-outlet></router-outlet>
+      <br /><br />
+
+      <h2 class="heading1">User Input</h2>
+      <form (ngSubmit)="onSubmit($event)">
+        <div>
+          <label for="input1">Input 1:</label>
+          <input type="text" id="input1" [(ngModel)]="input1" name="input1" />
+        </div>
+        <div>
+          <label for="input2">Input 2:</label>
+          <input type="text" id="input2" [(ngModel)]="input2" name="input2" />
+        </div>
+        <button class="submit" type="submit">Submit</button>
+        <p><br /></p>
+      </form>
+
+      <!-- Additional content with unique classes for each div -->
+      <div class="content-block content-block-1">
+        <p>Additional Content Block 1</p>
+      </div>
+      <div class="content-block content-block-2">
+        <p>Additional Content Block 2</p>
+      </div>
+      <div class="content-block content-block-3">
+        <p>Additional Content Block 3</p>
+      </div>
+      <div class="content-block content-block-4">
+        <p>Additional Content Block 4</p>
+      </div>
+      <div class="content-block content-block-5">
+        <p>Additional Content Block 5</p>
+      </div>
+      <div class="content-block content-block-6">
+        <p>Additional Content Block 6</p>
+      </div>
+      <div class="content-block content-block-7">
+        <p>Additional Content Block 7</p>
+      </div>
+      <div class="content-block content-block-8">
+        <p>Additional Content Block 8</p>
+      </div>
+      <div class="content-block content-block-9">
+        <p>Additional Content Block 9</p>
+      </div>
+      <div class="content-block content-block-10">
+        <p>Additional Content Block 10</p>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 MySPA. All Rights Reserved.</p>
+  </footer>
+</div>
